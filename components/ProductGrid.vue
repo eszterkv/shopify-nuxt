@@ -1,11 +1,15 @@
 <template>
-  <div>
-  </div>
+  <ul className="grid grid-cols-2 md:grid-cols-3">
+    <li v-for="product in products">
+      {{ product.title }}
+    </li>
+  </ul>
 </template>
 
 <script>
 import Vue from 'vue'
-import getAllProducts from '../gql/get-all-products.gql'
+import extractNodes from '~/helpers/extract-nodes'
+import getAllProducts from '~/gql/get-all-products.gql'
 
 export default Vue.extend({
   data() {
@@ -15,10 +19,11 @@ export default Vue.extend({
   },
   async fetch() {
     try {
-      const products = await this.$apollo.query({
+      const response = await this.$apollo.query({
         query: getAllProducts,
       })
-      console.log(products)
+
+      this.products = extractNodes(response, 'products')
     } catch (error) {
       console.log(error)
     }

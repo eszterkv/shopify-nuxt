@@ -6,7 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "test": "jest"
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",
@@ -16,9 +17,14 @@
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
+    "@nuxt/test-utils": "^0.2.2",
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/tailwindcss": "^4.2.0",
-    "postcss": "^8.3.5"
+    "@types/jest": "^27.0.2",
+    "jest": "^27.2.5",
+    "postcss": "^8.3.5",
+    "ts-jest": "^27.0.5",
+    "vue-jest": "^3.0.7"
   }
 }
