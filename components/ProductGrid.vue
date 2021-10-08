@@ -1,5 +1,5 @@
 <template>
-  <ul className="grid grid-cols-2 md:grid-cols-3">
+  <ul class="grid grid-cols-2 md:grid-cols-3">
     <li v-for="product in products">
       {{ product.title }}
     </li>
