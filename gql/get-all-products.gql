@@ -1,9 +1,27 @@
 query getAllProducts {
-  products(first: 5) {
+  products(first: 18) {
     edges {
       node {
         id
         title
+        handle
+        priceRange {
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+          maxVariantPrice {
+            amount
+            currencyCode
+          }
+        }
+        images(first: 1) {
+          edges {
+            node {
+              transformedSrc(maxWidth: 600)
+            }
+          }
+        }
       }
     }
   }

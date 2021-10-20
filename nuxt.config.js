@@ -1,3 +1,5 @@
+import aspectRatio from '@tailwindcss/aspect-ratio'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -59,5 +61,13 @@ export default {
         },
       }
     }
+  },
+
+  tailwindcss: {
+    config: {
+      plugins: [
+        aspectRatio,
+      ],
+    },
   },
 }

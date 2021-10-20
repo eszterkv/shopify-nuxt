@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/axios": "^5.13.6",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
     "core-js": "^3.15.1",
     "graphql-tag": "^2.12.5",
     "nuxt": "^2.15.7"
@@ -22,6 +23,7 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/tailwindcss": "^4.2.0",
     "@types/jest": "^27.0.2",
+    "babel-core": "^6.26.3",
     "jest": "^27.2.5",
     "postcss": "^8.3.5",
     "ts-jest": "^27.0.5",
